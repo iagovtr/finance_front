@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+export const MENU_WIDTH = "210px";
+
 export const GlobalStyles = createGlobalStyle`
   * {
     padding: 0;
