@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { MENU_WIDTH } from "../../styles/Global";
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   height: 100%;
   background: #131729;
@@ -32,12 +35,10 @@ export const SearchBarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 24px;
 `;
 
 export const MenuModulesContainer = styled.div`
-  min-height: 80%;
-  margin-top: 24px;
+  min-height: 75%;
 `;
 
 export const MenuItemContainer = styled.div<{ isActive: boolean }>`
@@ -58,7 +59,7 @@ export const MenuItemContainer = styled.div<{ isActive: boolean }>`
 `;
 
 export const MenuItemIcon = styled.img`
-  width: 30px;
+  width: 25px;
 `;
 
 export const MenuItemLink = styled(Link)`
@@ -66,3 +67,5 @@ export const MenuItemLink = styled(Link)`
   text-decoration: none;
   margin-left: 8px;
 `;
+
+export const UserProfileContainer = styled.div``;
