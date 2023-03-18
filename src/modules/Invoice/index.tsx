@@ -1,10 +1,12 @@
 import React from "react";
+import { InvoiceProvider } from "../../contexts/InvoiceContext";
+import ExpenseList from "./components/ExpenseList";
 
 const Invoice = () => {
   return (
-    <div>
-      <h1>Invoice</h1>
-    </div>
+    <InvoiceProvider>
+      <ExpenseList />
+    </InvoiceProvider>
   );
 };
 
