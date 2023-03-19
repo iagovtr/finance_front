@@ -12,6 +12,19 @@ export interface IAuthContext {
   signOut(): void;
 }
 
+export enum IStatusCode {
+  InvalidParams = 204,
+  BadRequest = 400,
+  InternalServerError = 500,
+  None = 0,
+}
+
+export interface IErrorMessagesProps {
+  [index: number]: {
+    message: string;
+  };
+}
+
 export interface IErrorContext {
   statusCode: number;
   setStatusCode(statusCode: number): void;

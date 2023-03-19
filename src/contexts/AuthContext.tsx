@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }: IChildrenElement) => {
 
   useEffect(() => {
     if (!getOnSessionStorage("SSID")) {
-      return setIsAuthenticated(false);
+      return signOut();
     }
     isValidToken();
   }, []);
