@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import UserProfileIcon from "/profile.png";
-import InfoIcon from "/info.png";
+import MoreIcon from "/more.png";
 
 const UserProfile = () => {
   return (
@@ -14,7 +14,7 @@ const UserProfile = () => {
         <S.ProfileEmail>E-mail do usuário</S.ProfileEmail>
       </S.ProfileLabelsContainer>
       <S.IconContainer>
-        <S.Icon src={InfoIcon} alt="Mais detalhes" className="info" />
+        <S.Icon src={MoreIcon} alt="Mais detalhes" className="info" />
       </S.IconContainer>
     </S.UserProfileContainer>
   );
