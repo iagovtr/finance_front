@@ -14,18 +14,4 @@ export const menuModules: IMenuModules[] = [
     altImage: "Dashboard",
     link: "/dashboard",
   },
-  {
-    id: 2,
-    title: "Faturas",
-    iconPath: "/invoice.png",
-    altImage: "Faturas",
-    link: "/invoice",
-  },
-  {
-    id: 3,
-    title: "Configurações",
-    iconPath: "/settings.png",
-    altImage: "Configurações",
-    link: "/setting",
-  },
 ];
