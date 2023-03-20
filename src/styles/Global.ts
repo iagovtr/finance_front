@@ -14,14 +14,14 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
-  input, button {
+  input, button, select, textarea {
     min-height: 35px;
     border-radius: 4px;
   }
 
   input {
     outline: none;
-    border: 0;
+    border: 1px solid;
     padding-left: 32px;
     color: #808496;
 
