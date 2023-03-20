@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }: IChildrenElement) => {
       const token = response.data.token;
       saveOnSessionStorage("SSID", token);
       setIsAuthenticated(true);
-      navigate("/invoice");
+      navigate("/dashboard");
     } catch (error) {
       setIsAuthenticated(false);
       if (error instanceof AxiosError) {
