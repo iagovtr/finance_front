@@ -4,7 +4,6 @@ import * as S from "./styles";
 import WalletBrandIcon from "/wallet-brand.png";
 import SearchBar from "../SearchBar";
 import { menuModules } from "./modules";
-import UserProfile from "./components/UserProfile";
 
 const Menu = () => {
   const [modules, setModules] = useState(menuModules);
@@ -39,9 +38,6 @@ const Menu = () => {
           </S.MenuItemContainer>
         ))}
       </S.MenuModulesContainer>
-      <S.UserProfileContainer>
-        <UserProfile />
-      </S.UserProfileContainer>
     </S.Container>
   );
 };

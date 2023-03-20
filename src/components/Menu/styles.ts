@@ -67,5 +67,3 @@ export const MenuItemLink = styled(Link)`
   text-decoration: none;
   margin-left: 8px;
 `;
-
-export const UserProfileContainer = styled.div``;
