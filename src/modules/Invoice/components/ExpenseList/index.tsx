@@ -25,23 +25,21 @@ const ExpenseList = () => {
               <S.TableColumns key={column}>{column}</S.TableColumns>
             ))}
           </tr>
-          <S.TableRowsWrapper>
-            {allExpenses.map((expense) => (
-              <Fragment key={expense.ExpenseID}>
-                <S.TableRows>{expense.Title}</S.TableRows>
-                <S.TableRows>{expense.SubCategory}</S.TableRows>
-                <S.TableRows>R$ {expense.ExpenseValue}</S.TableRows>
-                <S.TableRows>{expense.ExpenseDate}</S.TableRows>
-                <S.TableRows>{expense.Surname}</S.TableRows>
-                <S.TableRows className="center">
-                  {expense.Installments}
-                </S.TableRows>
-                <S.TableRows>
-                  <S.RemoveIcon src={RemoveIcon} alt="Excluir" />
-                </S.TableRows>
-              </Fragment>
-            ))}
-          </S.TableRowsWrapper>
+          {allExpenses.map((expense) => (
+            <S.TableRowsWrapper key={expense.ExpenseID}>
+              <S.TableRows>{expense.Title}</S.TableRows>
+              <S.TableRows>{expense.SubCategory}</S.TableRows>
+              <S.TableRows>R$ {expense.ExpenseValue}</S.TableRows>
+              <S.TableRows>{expense.ExpenseDate}</S.TableRows>
+              <S.TableRows>{expense.Surname}</S.TableRows>
+              <S.TableRows className="center">
+                {expense.Installments}
+              </S.TableRows>
+              <S.TableRows>
+                <S.RemoveIcon src={RemoveIcon} alt="Excluir" />
+              </S.TableRows>
+            </S.TableRowsWrapper>
+          ))}
         </tbody>
       </S.Table>
     </S.ExpenseListContainer>

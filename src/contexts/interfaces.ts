@@ -33,3 +33,18 @@ export interface IErrorContext {
 export interface IChildrenElement {
   children: React.ReactNode;
 }
+
+export interface IExpenses {
+  ExpenseID: number;
+  UserID: number;
+  Title: string;
+  SubCategory: string;
+  ExpenseValue: number;
+  ExpenseDate: string;
+  Surname: string;
+  Installments: number;
+}
+
+export interface IInvoiceContext {
+  allExpenses: IExpenses[];
+}
