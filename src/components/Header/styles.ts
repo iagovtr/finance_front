@@ -11,6 +11,7 @@ export const HeaderContainer = styled.div`
   left: ${MENU_WIDTH};
   background: #ffffff;
   padding: 0px 24px;
+  box-shadow: 0px 2px 7px 0px rgba(235, 238, 245, 0.5);
 `;
 
 export const WelcomeTitle = styled.p`
