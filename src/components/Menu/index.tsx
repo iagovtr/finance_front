@@ -1,8 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as S from "./styles";
-import WalletBrandIcon from "/wallet-brand.png";
-import SearchBar from "../SearchBar";
 import { menuModules } from "./modules";
 
 const Menu = () => {
@@ -21,17 +19,14 @@ const Menu = () => {
   return (
     <S.Container>
       <S.BrandContainer>
-        <S.BrandLogo src={WalletBrandIcon} alt="Logomarca" />
         <S.BrandName>Financex</S.BrandName>
       </S.BrandContainer>
-      <S.SearchBarContainer>
-        <SearchBar placeholder="Pesquisa" onChange={handleChange} />
-      </S.SearchBarContainer>
+      <S.Divider />
       <S.MenuModulesContainer>
         {modules.map((menuItem) => (
           <S.MenuItemContainer
             key={menuItem.id}
-            isActive={menuItem.link === pathname}
+            activeItem={menuItem.link === pathname}
           >
             <S.MenuItemIcon src={menuItem.iconPath} alt={menuItem.altImage} />
             <S.MenuItemLink to={menuItem.link}>{menuItem.title}</S.MenuItemLink>

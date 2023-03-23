@@ -5,11 +5,11 @@ import { MENU_WIDTH } from "../../styles/Global";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: fixed;
   height: 100%;
-  background: #131729;
-  padding: 24px 8px;
+  background: #ffffff;
+  padding: 12px 0px;
+  border-right: 0.6px solid #ebeef5;
 
   @media (min-width: 992px) {
     width: ${MENU_WIDTH};
@@ -19,43 +19,47 @@ export const Container = styled.div`
 export const BrandContainer = styled.div`
   display: flex;
   align-items: center;
-`;
-
-export const BrandLogo = styled.img`
-  width: 40px;
-`;
-
-export const BrandName = styled.h2`
-  font-weight: 500;
-  color: #ffffff;
-  margin-left: 12px;
-`;
-
-export const SearchBarContainer = styled.div`
-  display: flex;
-  align-items: center;
   justify-content: center;
 `;
 
-export const MenuModulesContainer = styled.div`
-  min-height: 75%;
+export const BrandName = styled.h2`
+  font-weight: 600;
+  color: #3b3a3f;
 `;
 
-export const MenuItemContainer = styled.div<{ isActive: boolean }>`
+export const Divider = styled.div`
+  border-bottom: 0.6px solid #ebeef5;
+  margin-top: 12px;
+  width: 100%;
+`;
+
+export const MenuModulesContainer = styled.div`
+  margin-top: 36px;
+`;
+
+export const MenuItemContainer = styled.div<{ activeItem: boolean }>`
   display: flex;
   align-items: center;
-  background: ${({ isActive }) => (isActive ? "#242839" : "")};
+  justify-content: center;
   border-radius: 4px;
   height: 40px;
-
-  a {
-    font-weight: ${({ isActive }) => (isActive ? "500" : "400")};
-    color: ${({ isActive }) => (isActive ? "#ffffff" : "")};
-  }
 
   & + & {
     margin-top: 12px;
   }
+
+  ${({ activeItem }) =>
+    activeItem &&
+    `
+    img {
+      filter: brightness(0) sepia(1) hue-rotate(-70deg) saturate(5);
+    }
+
+    a {
+      color: #000000;
+      font-weight: 700;
+    }
+  `}
 `;
 
 export const MenuItemIcon = styled.img`
@@ -64,6 +68,7 @@ export const MenuItemIcon = styled.img`
 
 export const MenuItemLink = styled(Link)`
   color: #808496;
+  font-weight: 600;
   text-decoration: none;
-  margin-left: 8px;
+  margin-left: 4px;
 `;

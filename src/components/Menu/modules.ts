@@ -10,7 +10,7 @@ export const menuModules: IMenuModules[] = [
   {
     id: 1,
     title: "Dashboard",
-    iconPath: "/dashboard.png",
+    iconPath: "/dashboard-gray.svg",
     altImage: "Dashboard",
     link: "/dashboard",
   },
