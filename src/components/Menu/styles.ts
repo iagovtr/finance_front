@@ -8,12 +8,9 @@ export const Container = styled.div`
   position: fixed;
   height: 100%;
   background: #ffffff;
-  padding: 12px 0px;
+  padding: 8px 0px;
   border-right: 0.6px solid #ebeef5;
-
-  @media (min-width: 992px) {
-    width: ${MENU_WIDTH};
-  }
+  width: ${MENU_WIDTH};
 `;
 
 export const BrandContainer = styled.div`
