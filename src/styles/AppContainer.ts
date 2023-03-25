@@ -6,4 +6,5 @@ export const AppContainer = styled.div`
   width: calc(100% - ${MENU_WIDTH});
   left: ${MENU_WIDTH};
   padding: 24px;
+  top: 60px;
 `;
